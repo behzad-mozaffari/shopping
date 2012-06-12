@@ -44,4 +44,4 @@ Notes on implementation:
 - don't build guis etc, we're more interested in your approach to solving the given task, not how shiny it looks
 - don't use any frameworks (rails, spring etc), or any external jars/gems (unless it's for testing)
 
-When you're finished, zip up your solution and send it to jlowe@dius.com.au. Good Luck!
+When you've finished, zip up your solution and send it to jlowe@dius.com.au. Good Luck!

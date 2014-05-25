@@ -1,6 +1,8 @@
 DiUS is starting a computer store. You have been engaged to build the checkout system. We will start with the following products in our catalogue
 
+
 | SKU     | Name        | Price    |
+| --------|:-----------:| --------:|
 | ipd     | Super iPad  | $549.99  |
 | mbp     | MacBook Pro | $1399.99 |
 | atv     | Apple TV    | $109.50  |

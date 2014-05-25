@@ -18,10 +18,12 @@ Our checkout system can scan items in any order.
 
 The interface to our checkout looks like this (shown in java):
 
+```java
   Checkout co = new Checkout(pricingRules);
   co.scan(item1);
   co.scan(item2);
   co.total();
+```
 
 Your task is to implement a checkout system that fulfils the requirements described above.
 

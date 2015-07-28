@@ -49,4 +49,4 @@ Notes on implementation:
 - don't worry about making a command line interface to the application
 - don't use any frameworks (rails, spring etc), or any external jars/gems (unless it's for testing)
 
-When you've finished, zip up your solution and send it to jlowe@dius.com.au. Good Luck!
+When you've finished, zip up your solution and send it to bmorrison@dius.com.au. Good Luck!

@@ -43,7 +43,7 @@ Total expected: $1949.98
 
 Notes on implementation:
 
-- use **Java, Javascript, Ruby, Groovy, Scala or C#**
+- use **Java, Javascript, Ruby, Groovy, Scala or Swift**
 - try not to spend more than 2 hours maximum. (We don't want you to lose a weekend over this!)
 - don't build guis etc, we're more interested in your approach to solving the given task, not how shiny it looks
 - don't worry about making a command line interface to the application

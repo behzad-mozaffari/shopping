@@ -43,10 +43,10 @@ Total expected: $1949.98
 
 Notes on implementation:
 
-- use **Java, Javascript, Ruby, Groovy, Scala or Swift**
+- use **Java, Javascript, Ruby, Kotlin, Swift, or Groovy**
 - try not to spend more than 2 hours maximum. (We don't want you to lose a weekend over this!)
 - don't build guis etc, we're more interested in your approach to solving the given task, not how shiny it looks
 - don't worry about making a command line interface to the application
-- don't use any frameworks (rails, spring etc), or any external jars/gems (unless it's for testing)
+- don't use any frameworks (rails, spring etc), or any external jars/gems (unless it's for testing or build/dependency mgt)
 
-When you've finished, zip up your solution and send it to bmorrison@dius.com.au. Good Luck!
+When you've finished, send through the link to your github-repo. Happy coding

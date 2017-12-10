@@ -41,12 +41,20 @@ public class BulkDiscountTest {
 
     @Test
     public void shouldOnlyDiscountIfNotLessThanMinimumItemsAreScanned() {
-
+        BulkDiscount rule = new BulkDiscount(ipd, 5, BigDecimal.valueOf(10));
+        rule.scan(ipd);
+        rule.scan(ipd);
+        BigDecimal discount = rule.getDiscount();
+        assertThat(discount, is(BigDecimal.valueOf(0, 2)));
     }
 
-    @Test
+    @Test(expected = InvalidDiscountedPrice.class)
     public void shouldRaiseExceptionIfAfterDiscountValueIsNegative() {
-
+        new BulkDiscount(ipd, 5, BigDecimal.valueOf(-1));
     }
 
+    @Test(expected = InvalidDiscountedPrice.class)
+    public void shouldRaiseExceptionIfAfterDiscountValueIsGreaterThanOriginalPrice() {
+        new BulkDiscount(ipd, 5, ipd.getPrice().add(BigDecimal.ONE));
+    }
 }

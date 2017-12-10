@@ -1,5 +1,6 @@
 package com.behzadmozaffari.shopping;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Checkout {
@@ -11,5 +12,9 @@ public class Checkout {
 
     public void scan(Item i) {
 
+    }
+
+    public BigDecimal total() {
+        return null;
     }
 }

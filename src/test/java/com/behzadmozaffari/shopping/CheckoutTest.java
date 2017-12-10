@@ -1,8 +1,9 @@
 package com.behzadmozaffari.shopping;
 
-import com.behzadmozaffari.shopping.PricingRules.BulkDiscount;
-import com.behzadmozaffari.shopping.PricingRules.BundleDiscount;
-import com.behzadmozaffari.shopping.PricingRules.PricingRule;
+import com.behzadmozaffari.shopping.pricingRules.BulkDiscount;
+import com.behzadmozaffari.shopping.pricingRules.BundleDiscount;
+import com.behzadmozaffari.shopping.pricingRules.PricingRule;
+import com.behzadmozaffari.shopping.pricingRules.TakeOneForFree;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -55,6 +56,15 @@ public class CheckoutTest {
         Checkout co = new Checkout(rules);
         scanAll(co, mbp, vga, ipd);
         assertThat(co.total(), is(BigDecimal.valueOf(194998, 2)));
+    }
+
+    @Test
+    public void shouldCalculateTakeOneFreeDiscount() {
+        List<PricingRule> rules = Collections.singletonList(
+                new TakeOneForFree(atv, 3));
+        Checkout co = new Checkout(rules);
+        scanAll(co, atv, atv, atv, vga);
+        assertThat(co.total(), is(BigDecimal.valueOf(24900, 2)));
     }
 
     private void scanAll(Checkout co, Item ...items) {

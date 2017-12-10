@@ -1,6 +1,7 @@
 package com.behzadmozaffari.shopping;
 
-import com.behzadmozaffari.shopping.PricingRules.PricingRule;
+
+import com.behzadmozaffari.shopping.pricingRules.PricingRule;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

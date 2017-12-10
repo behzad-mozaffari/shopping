@@ -1,4 +1,4 @@
-package com.behzadmozaffari.shopping.PricingRules;
+package com.behzadmozaffari.shopping.pricingRules;
 
 public class InvalidBundleItems extends RuntimeException {
 }

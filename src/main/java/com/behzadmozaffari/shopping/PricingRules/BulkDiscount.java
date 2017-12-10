@@ -1,4 +1,4 @@
-package com.behzadmozaffari.shopping.PricingRules;
+package com.behzadmozaffari.shopping.pricingRules;
 
 import com.behzadmozaffari.shopping.Item;
 
@@ -16,7 +16,7 @@ public class BulkDiscount implements PricingRule {
     public BulkDiscount(Item itemType, int minimumCount, BigDecimal priceAfterDiscount) {
         if ((priceAfterDiscount.compareTo(itemType.getPrice()) > 0)
                 || (priceAfterDiscount.compareTo(BigDecimal.ZERO) < 0)) {
-            throw new InvalidDiscountedPrice();
+            throw new com.behzadmozaffari.shopping.PricingRules.InvalidDiscountedPrice();
         }
         this.itemType = itemType;
         this.minimumCount = minimumCount;

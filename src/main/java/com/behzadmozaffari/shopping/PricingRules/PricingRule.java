@@ -1,4 +1,4 @@
-package com.behzadmozaffari.shopping.PricingRules;
+package com.behzadmozaffari.shopping.pricingRules;
 
 import com.behzadmozaffari.shopping.Item;
 

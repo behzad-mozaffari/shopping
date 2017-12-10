@@ -1,4 +1,4 @@
-package com.behzadmozaffari.shopping.PricingRules;
+package com.behzadmozaffari.shopping.pricingRules;
 
 import org.junit.Test;
 
@@ -48,12 +48,12 @@ public class BulkDiscountTest {
         assertThat(discount, is(BigDecimal.valueOf(0, 2)));
     }
 
-    @Test(expected = InvalidDiscountedPrice.class)
+    @Test(expected = com.behzadmozaffari.shopping.PricingRules.InvalidDiscountedPrice.class)
     public void shouldRaiseExceptionIfAfterDiscountValueIsNegative() {
         new BulkDiscount(ipd, 5, BigDecimal.valueOf(-1));
     }
 
-    @Test(expected = InvalidDiscountedPrice.class)
+    @Test(expected = com.behzadmozaffari.shopping.PricingRules.InvalidDiscountedPrice.class)
     public void shouldRaiseExceptionIfAfterDiscountValueIsGreaterThanOriginalPrice() {
         new BulkDiscount(ipd, 5, ipd.getPrice().add(BigDecimal.ONE));
     }

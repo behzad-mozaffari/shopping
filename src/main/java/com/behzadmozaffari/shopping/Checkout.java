@@ -15,6 +15,6 @@ public class Checkout {
     }
 
     public BigDecimal total() {
-        return null;
+        return BigDecimal.ZERO;
     }
 }

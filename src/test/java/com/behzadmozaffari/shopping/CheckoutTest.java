@@ -1,6 +1,7 @@
 package com.behzadmozaffari.shopping;
 
 import com.behzadmozaffari.shopping.PricingRules.BulkDiscount;
+import com.behzadmozaffari.shopping.PricingRules.BundleDiscount;
 import com.behzadmozaffari.shopping.PricingRules.PricingRule;
 import org.junit.Test;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import static com.behzadmozaffari.shopping.Item.atv;
 import static com.behzadmozaffari.shopping.Item.ipd;
 import static com.behzadmozaffari.shopping.Item.mbp;
+import static com.behzadmozaffari.shopping.Item.vga;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -44,6 +46,15 @@ public class CheckoutTest {
         Checkout co = new Checkout(rules);
         scanAll(co, atv, ipd, ipd, atv, ipd, ipd, ipd);
         assertThat(co.total(), is(BigDecimal.valueOf(271895, 2)));
+    }
+
+    @Test
+    public void shouldCalculateBundleDiscount() {
+        List<PricingRule> rules = Collections.singletonList(
+                new BundleDiscount(mbp, vga));
+        Checkout co = new Checkout(rules);
+        scanAll(co, mbp, vga, ipd);
+        assertThat(co.total(), is(BigDecimal.valueOf(194998, 2)));
     }
 
     private void scanAll(Checkout co, Item ...items) {

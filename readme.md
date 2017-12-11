@@ -1,3 +1,5 @@
+Run tests using `gradlew test`
+
 The class `com.behzadmozaffari.shopping.CheckoutExample` shows and example of 
 usage as well as the API for setting up the PricingRules.
 

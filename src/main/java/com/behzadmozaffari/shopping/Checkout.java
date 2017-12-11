@@ -24,7 +24,6 @@ public class Checkout {
     public BigDecimal total() {
         return rules.stream().
                 map(PricingRule::getDiscount).
-                peek(System.out::println).
                 reduce(total, BigDecimal::subtract);
     }
 }

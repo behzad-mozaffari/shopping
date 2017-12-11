@@ -3,10 +3,8 @@ package com.behzadmozaffari.shopping.pricingRules;
 import com.behzadmozaffari.shopping.Item;
 
 import java.math.BigDecimal;
-import java.util.logging.Logger;
 
 public class BulkDiscount implements PricingRule {
-    private final static Logger LOGGER = Logger.getLogger(BulkDiscount.class.getName());
 
     private Item itemType;
     private int minimumCount;
@@ -28,9 +26,7 @@ public class BulkDiscount implements PricingRule {
         if (scanned < minimumCount) {
             return BigDecimal.valueOf(0, 2);
         }
-        BigDecimal discount = itemType.getPrice().subtract(priceAfterDiscount).multiply(BigDecimal.valueOf(scanned));
-        LOGGER.info("getting bulk item discount, counted " + scanned + " items, discount : " + discount);
-        return discount;
+        return itemType.getPrice().subtract(priceAfterDiscount).multiply(BigDecimal.valueOf(scanned));
     }
 
     @Override
